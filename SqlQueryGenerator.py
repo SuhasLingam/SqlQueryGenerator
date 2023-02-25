@@ -1,12 +1,13 @@
 import time
 
 
+global SelectWhereClause
 print('*********************************************')
 print('\n')
 print('\tWelcome To SQL Query Generator')
 print('\n')
 print('*********************************************')
-time.sleep(2)
+time.sleep(0)
 print('\n')
 print('Select a Option')
 Selectquery = int(input(
@@ -17,22 +18,33 @@ def GlobalTableName():
     global tableName
     tableName = str(input('\nEnter Table Name : '))
 
-
 def addWhereClause():
-    whereClause = "WHERE"
-
+    global whereClause
+    print("\nEnter the Condition\nExample: name = 'John' \n")
+    whereClause = str(input("Condition = "))
 
 def SelectQueryFunct():
     print(' \nSelect Option \n')
     option = int(input('1) Specify Column \n2) From All\n\n SelectedOption = '))
     if (option == 1):
         ColumnName = str(input('\nEnter the Column Name : '))
-
-        print('\nYour Final Query is \n')
-        print(f'SELECT {ColumnName} FROM {tableName}; \n')
+        SelectWhereClause = int(input("\nDo You Want To Include Where Clause ? \n 1) YES 2) NO \n Selected Option : "))
+        
+        if(SelectWhereClause == 1):
+            addWhereClause()
+            print('\nYour Final Query is \n')
+            print(f'SELECT {ColumnName} FROM {tableName} WHERE {whereClause}; \n')
+        
+        
     else:
-        print(f'SELECT * FROM {tableName}; \n')
-
+        SelectWhereClause = int(input("\nDo You Want To Include Where Clause ? \n 1) YES 2) NO \n Selected Option : "))
+        if(SelectWhereClause == 1):
+            addWhereClause()
+            print('\nYour Final Query is \n')
+            print(f'SELECT * FROM {tableName} WHERE {whereClause}; \n')
+        else:    
+            print('\nYour Final Query is \n')
+            print(f'SELECT * FROM {tableName}; \n')
 
 def proceedQuery(Selectquery):
     if (Selectquery == 1):
