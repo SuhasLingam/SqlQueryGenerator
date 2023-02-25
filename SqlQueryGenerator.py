@@ -9,8 +9,7 @@ print('*********************************************')
 time.sleep(0)
 print('\n')
 print('Select a Option')
-Selectquery = int(input(
-    '\n 1) SELECT \n 2) INSERT IN \n 3) DELETE \n 4) UPDATE \n 5) ORDER BY \n\n SelectedQuery = '))
+Selectquery = int(input('\n 1) SELECT \n 2) INSERT IN \n 3) DELETE \n 4) UPDATE \n 5) ORDER BY \n 6) QUIT \n\n SelectedQuery = '))
 
 
 global SelectWhereClause
@@ -61,6 +60,8 @@ def proceedQuery(Selectquery):
     if (Selectquery == 1):
         GlobalTableName()
         SelectQueryFunct()
-
+    elif (Selectquery == 6):
+        print("\n")
+        ThankYouMsg()
 
 proceedQuery(Selectquery)
