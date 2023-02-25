@@ -24,8 +24,7 @@ def addWhereClause():
 
 def SelectQueryFunct():
     print(' \nSelect Option \n')
-    option = int(
-        input('1) Specify Column \n2) From All\n\n SelectedOption = '))
+    option = int(input('1) Specify Column \n2) From All\n\n SelectedOption = '))
     if (option == 1):
         ColumnName = str(input('\nEnter the Column Name : '))
 
