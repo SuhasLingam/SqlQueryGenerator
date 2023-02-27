@@ -6,7 +6,7 @@ print('\n')
 print('\tWelcome To SQL Query Generator')
 print('\n')
 print('*********************************************')
-time.sleep(0)
+time.sleep(1)
 print('\n')
 print('Select a Option')
 Selectquery = int(input('\n 1) SELECT \n 2) INSERT IN \n 3) DELETE \n 4) UPDATE \n 5) ORDER BY \n 6) QUIT \n\n SelectedQuery = '))
@@ -22,6 +22,7 @@ global SelectWhereClause
         
     
 def ThankYouMsg():
+    time.sleep(3)
     print('*********************************************')
     print('\n')
     print('   Thank You For Using SQL Query Generator')
