@@ -12,6 +12,7 @@ print('Select a Option')
 Selectquery = int(input('\n 1) SELECT \n 2) INSERT IN \n 3) DELETE \n 4) UPDATE \n 5) ORDER BY \n 6) QUIT \n\n SelectedQuery = '))
 
 
+
 global SelectWhereClause
 
 
